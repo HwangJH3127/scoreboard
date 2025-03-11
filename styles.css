@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.set-score {
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #666;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.team {
+  text-align: center;
+}
+
+.team-name {
+  font-size: 22px;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.score {
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+
+/* 중앙 컨트롤 영역 정렬 */
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 타이머 */
+.timer {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* 버튼 정렬 */
+.controls {
+  display: flex;
+  gap: 10px; /* 버튼 간격 통일 */
+}
+
+/* 버튼 스타일 */
+.controls button {
+  font-size: 20px;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 버튼별 색상 */
+.start { background-color: green; color: white; }
+.pause { background-color: red; color: white; }
+.reset { background-color: orange; color: black; }
+
+/* 마우스 올렸을 때 */
+.controls button:hover {
+  filter: brightness(1.2);
+}
+
+/* 버튼 클릭 효과 */
+.controls button:active {
+  transform: scale(0.95);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 점수 클릭 효과 */
+/* .score:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease-in-out;
+} */
+
+/* 모달 배경 */
+.modal {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* 모달 내용 */
+.modal-content {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 닫기 버튼 (X) */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* 입력 필드 */
+#teamNameInput {
+  width: 80%;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* 저장 버튼 */
+.modal-content button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-content button:hover {
+  background-color: #218838;
+}
+
+
+@media (max-width: 600px) {
+  .scoreboard {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .controls {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .score {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 36px;
+  }
+
+  .timer {
+      font-size: 28px;
+  }
+
+  .controls button {
+      width: 50px;
+      height: 50px;
+      font-size: 14px;
+  }
+
+  .modal-content {
+      width: 80%;
+  }
+}
