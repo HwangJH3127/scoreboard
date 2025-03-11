@@ -1,2 +1,1 @@
-# scoreboard
-scoreboard
+# 디알시스 배구 점수판 테스트입니다.
